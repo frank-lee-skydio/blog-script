@@ -1,0 +1,17 @@
+{
+  "name": "blog-script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node reviewBlogContent.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sanity/client": "^6.21.1",
+    "csv-write-stream": "^2.0.0"
+  }
+}
