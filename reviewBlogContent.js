@@ -1,6 +1,6 @@
 import { createClient } from "@sanity/client";
 import fs from "fs";
-import { dataset, projectId } from "./hidden_constant";
+import { dataset, projectId } from "./hidden_constant.js";
 
 export const client = createClient({
   projectId: projectId,
@@ -23,11 +23,11 @@ export async function fetchAllData() {
 async function exportDataToJson() {
   try {
     const allData = await fetchAllData();
-    fs.writeFileSync(
-      "allPosts.json",
-      JSON.stringify(allData, null, 2),
-      "utf-8"
-    );
+    // fs.writeFileSync(
+    //   "allPosts.json",
+    //   JSON.stringify(allData, null, 2),
+    //   "utf-8"
+    // );
     console.log("Data has been exported to allPosts.json");
   } catch (error) {
     console.error("Error exporting data to JSON:", error);

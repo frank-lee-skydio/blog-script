@@ -1,5 +1,7 @@
-hidden_constant.ts
+hidden_constant.js
 allPosts.json
 package-lock.json
 node_modules
 slug_type_combinations.csv
+.env
+assets
