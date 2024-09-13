@@ -228,7 +228,7 @@ export async function migrate() {
 
     // Upload the new document to Sanity v3
     try {
-      const response = await clientV3.createIfNotExists(flattenedDoc);
+      const response = await clientV3.createOrReplace(flattenedDoc);
       console.log("New document uploaded to Sanity:", response);
     } catch (error) {
       console.error("Error uploading new document to Sanity:", error);
